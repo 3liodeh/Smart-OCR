@@ -1,5 +1,9 @@
 # 🖼️🔍 AI-Powered OCR: Smart Text Extraction 🚀
 
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)
+
+
 A Flask web application that extracts text from images/videos using OCR, enables text refinement through Gemini AI, and maintains contextual chat conversations. 🤖💬
 
 ## ✨ Features
