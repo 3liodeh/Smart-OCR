@@ -42,7 +42,7 @@ def deal_with_image(image_path):
     return size_check(processed_image)
 
 # Function to send an image to OCR.space API and retrieve text
-def ocr_space_file(filename, language='eng,ara', ocr_engine=1):
+def ocr_space_file(filename, language='auto', ocr_engine=2):
     payload = {
         'apikey': ocr_token,  # Replace with your API key
         'language': language,
@@ -59,7 +59,7 @@ def ocr_space_file(filename, language='eng,ara', ocr_engine=1):
 # Function to extract text from an image
 def ImageOCR(img):
     image = deal_with_image(img)
-    json_format = ocr_space_file(image, language='eng,ara')
+    json_format = ocr_space_file(image, language='auto')
 
     try:
         result_json = json.loads(json_format)
