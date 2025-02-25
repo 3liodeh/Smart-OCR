@@ -68,7 +68,7 @@ def ImageOCR(img):
         parsed_text = 'there is something wrong'
 
     # Remove temporary files related to the process
-    for file in ["resized_" + os.path.basename(img), "converted_image.jpg"]:
+    for file in [f for f in os.listdir(os.getcwd()) if f.lower().endswith(".jpg")]:
         if os.path.exists(file):
             os.remove(file)
 
