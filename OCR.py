@@ -59,7 +59,7 @@ def ocr_space_file(filename, language='eng,ara', ocr_engine=1):
 # Function to extract text from an image
 def ImageOCR(img):
     image = deal_with_image(img)
-    json_format = ocr_space_file(image, language='eng')
+    json_format = ocr_space_file(image, language='eng,ara')
 
     try:
         result_json = json.loads(json_format)
