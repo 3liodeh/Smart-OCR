@@ -274,6 +274,11 @@ def logout():
     except Exception as e:
         raise Exception("Error in /logout route: " + str(e))
 
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.static_folder, 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 @app.errorhandler(Exception)
 def handle_exception(e):
     # Get the full traceback for detailed error reporting
