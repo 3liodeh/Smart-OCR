@@ -42,11 +42,12 @@ def deal_with_image(image_path):
     return size_check(processed_image)
 
 # Function to send an image to OCR.space API and retrieve text
-def ocr_space_file(filename, language='eng'):
+def ocr_space_file(filename, language='eng,ara', ocr_engine=1):
     payload = {
         'apikey': ocr_token,  # Replace with your API key
         'language': language,
-        'isOverlayRequired': False
+        'isOverlayRequired': False,
+        'OCREngine': ocr_engine
     }
 
     with open(filename, 'rb') as f:
