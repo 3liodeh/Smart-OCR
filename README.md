@@ -1,4 +1,4 @@
-# 🖼️🔍 OCR-to-LLM Processing Pipeline 🚀
+# 🖼️🔍 AI-Powered OCR: Smart Text Extraction 🚀
 
 A Flask web application that extracts text from images/videos using OCR, enables text refinement through Gemini AI, and maintains contextual chat conversations. 🤖💬
 
