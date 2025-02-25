@@ -65,8 +65,8 @@ def ImageOCR(img):
         result_json = json.loads(json_format)
         parsed_results = result_json.get('ParsedResults', [])
         parsed_text = parsed_results[0].get('ParsedText', '') if parsed_results else ''
-    except (json.JSONDecodeError, IndexError, AttributeError):
-        parsed_text = 'there is something wrong'
+    except Exception as e:
+        parsed_text = f'There is something wrong {e}'
 
     # Remove temporary files related to the process
     for file in [f for f in os.listdir(os.getcwd()) if f.lower().endswith(".jpg")]:
